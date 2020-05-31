@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using FlowerStore.Models;
 
 
@@ -24,7 +23,7 @@ namespace FlowerStore.Controllers
         }
         public IActionResult Adminstration()
         {
-            return View(new Models.AdminListItem());
+            return View();
         }
     }
 }
