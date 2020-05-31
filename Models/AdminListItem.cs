@@ -7,6 +7,7 @@ namespace FlowerStore.Models
 {
     public class AdminListItem
     {
+        public int Id { get; set; }
         public int AddFlower { get; set; }
         public string EditFlower { get; set; }
         public string DeleteFlower { get; set; }
