@@ -10036,3 +10036,23 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+
+
+/* Administration Page styles
+-------------------------------------------------- */
+
+#content {
+    display: flex;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.column {
+    padding: 20px;
+    border: 2px solid black;
+    margin: 20px;
+}
