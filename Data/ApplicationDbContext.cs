@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 using FlowerStore.Models;
@@ -16,3 +17,4 @@ namespace FlowerStore.Data
         public DbSet<AdminListItem> AdminListItem { get; set; }
     }
 }
+
