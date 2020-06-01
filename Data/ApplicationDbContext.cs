@@ -17,11 +17,3 @@ namespace FlowerStore.Data
         public DbSet<AdminListItem> AdminListItem { get; set; }
     }
 }
-
-
-
-
-
-
-
-
