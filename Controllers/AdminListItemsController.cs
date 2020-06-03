@@ -20,9 +20,10 @@ namespace FlowerStore.Controllers
         }
 
         // GET: AdminListItems
+
         public async Task<IActionResult> Index()
         {
-            return View(await _context.AdminListItem.ToListAsync());
+            return View(await _context.Flower.ToListAsync());
         }
 
         // GET: AdminListItems/Details/5
@@ -33,7 +34,7 @@ namespace FlowerStore.Controllers
                 return NotFound();
             }
 
-            var adminListItem = await _context.AdminListItem
+            var adminListItem = await _context.Flower
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (adminListItem == null)
             {
@@ -54,7 +55,7 @@ namespace FlowerStore.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,AddFlower,EditFlower,DeleteFlower,NameofFlower,Price,Stock")] AdminListItem adminListItem)
+        public async Task<IActionResult> Create([Bind("Id,Name,Image,price,Quantity")] Flower adminListItem)
         {
             if (ModelState.IsValid)
             {
@@ -73,7 +74,7 @@ namespace FlowerStore.Controllers
                 return NotFound();
             }
 
-            var adminListItem = await _context.AdminListItem.FindAsync(id);
+            var adminListItem = await _context.Flower.FindAsync(id);
             if (adminListItem == null)
             {
                 return NotFound();
@@ -86,7 +87,7 @@ namespace FlowerStore.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,AddFlower,EditFlower,DeleteFlower,NameofFlower,Price,Stock")] AdminListItem adminListItem)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Image,price,Quantity")] Flower adminListItem)
         {
             if (id != adminListItem.Id)
             {
@@ -124,7 +125,7 @@ namespace FlowerStore.Controllers
                 return NotFound();
             }
 
-            var adminListItem = await _context.AdminListItem
+            var adminListItem = await _context.Flower
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (adminListItem == null)
             {
@@ -139,15 +140,15 @@ namespace FlowerStore.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var adminListItem = await _context.AdminListItem.FindAsync(id);
-            _context.AdminListItem.Remove(adminListItem);
+            var adminListItem = await _context.Flower.FindAsync(id);
+            _context.Flower.Remove(adminListItem);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool AdminListItemExists(int id)
         {
-            return _context.AdminListItem.Any(e => e.Id == id);
+            return _context.Flower.Any(e => e.Id == id);
         }
     }
 }

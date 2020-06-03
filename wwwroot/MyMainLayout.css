@@ -1,0 +1,327 @@
+﻿/*[1. IMPORT SOURCE]*/
+@import url(font-awesome.css);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300);
+
+
+body {
+    background-image: url('lib/images/14 (2).png.jpg');
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    background: border-box;
+}
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+
+/*[3. LOGO]*/
+.logo {
+    margin-bottom: 50px
+}
+
+    .logo h1 {
+        margin: 5px 0 5px;
+        text-align: left;
+        font-size: 32px;
+        line-height: 34px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+    }
+
+        .logo h1 span {
+            font-weight: 300;
+            font-family: 'PT Serif', serif;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .logo h1 a {
+            color: #444;
+            text-decoration: none;
+            -webkit-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+            -moz-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+            -ms-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+            -o-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+            transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+        }
+
+            .logo h1 a:hover,
+            .logo h2 a:hover {
+                color: #888;
+                text-decoration: underline;
+            }
+
+
+.account {
+    text-align: right;
+}
+
+    .account a {
+        color: #005faa;
+        text-decoration: none;
+    }
+
+        .account a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+
+    .account h4 {
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .account ul {
+        list-style-type: none;
+        margin-left: -20px;
+        float: right;
+    }
+
+        .account ul > li {
+            float: left;
+            margin: 0 0 0 10px;
+            font-family: 'PT Serif', serif;
+        }
+
+            .account ul > li:nth-child(1),
+            .account ul > #your-account {
+                border-right: 1px solid #333;
+                padding-right: 12px;
+            }
+
+/*[4. NAV MENU]*/
+
+
+.nav-menus {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-family: 'PT Serif', serif;
+}
+
+    .nav-menus .nav-pills > li > a {
+        background: transparent;
+        color: #333;
+        margin: 15px;
+        color: #000;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 50px;
+        border-color: #00ffff
+    }
+
+        .nav-menus .nav-pills > li > a:hover {
+            background: #eaeaea;
+            color: #333;
+            flex-direction: row;
+        }
+
+    .nav-menus .nav-pills > .active > a,
+    .nav-menus .nav-pills > .active > a:hover,
+    .nav-menus .nav-pills > .active > a:focus {
+        background: #0026ff;
+        color: #00ffff;
+    }
+
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.slide-image {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: calc(100% + 400px);
+    height: calc(100% + 400px);
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.slide-title {
+    font-size: 4rem;
+    line-height: 1;
+    max-width: 50%;
+    white-space: normal;
+    word-break: break-word;
+    color: #FFF;
+    z-index: 100;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.slide-paragraph {
+    font-size: 2rem;
+    line-height: 1;
+    max-width: 20%;
+    white-space: normal;
+    word-break: break-word;
+    color: #FFF;
+    z-index: 100;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+}
+
+@media (min-width: 45em) {
+    .slide-title {
+        font-size: 7vw;
+        max-width: none;
+    }
+}
+
+.slide-title span {
+    white-space: pre;
+    display: inline-block;
+    opacity: 0;
+}
+
+.slideshow {
+    position: relative;
+}
+
+.slideshow-pagination {
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: .3s opacity;
+    z-index: 10;
+}
+
+.slideshow-pagination-item {
+    display: flex;
+    align-items: center;
+}
+
+    .slideshow-pagination-item .pagination-number {
+        opacity: 0.5;
+    }
+
+    .slideshow-pagination-item:hover, .slideshow-pagination-item:focus {
+        cursor: pointer;
+    }
+
+    .slideshow-pagination-item:last-of-type .pagination-separator {
+        width: 0;
+    }
+
+    .slideshow-pagination-item.active .pagination-number {
+        opacity: 1;
+    }
+
+    .slideshow-pagination-item.active .pagination-separator {
+        width: 10vw;
+    }
+
+.slideshow-navigation-button {
+    position: center;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 5rem;
+    z-index: 1000;
+    transition: all .3s ease;
+    color: #FFF;
+}
+
+    .slideshow-navigation-button:hover, .slideshow-navigation-button:focus {
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .slideshow-navigation-button.prev {
+        left: 0;
+    }
+
+    .slideshow-navigation-button.next {
+        right: 0;
+    }
+
+.pagination-number {
+    font-size: 1.8rem;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    padding: 0 0.5rem;
+}
+
+.pagination-separator {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.25);
+    transition: all .3s ease;
+}
+
+@media (min-width: 45em) {
+    .pagination-separator {
+        display: block;
+    }
+}
+
+.pagination-separator-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    transform-origin: 0 0;
+}
+
+.olContent {
+    width: 100%;
+}
+
+    .olContent h2 {
+        color: #fff;
+        font-size: 19px;
+        padding: 9px 0 0;
+    }
+
+.olSearch {
+    width: 100%;
+}
+
+    .olSearch .inputComn {
+        margin-bottom: 0;
+    }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -8,6 +8,8 @@
   <ItemGroup>
     <Compile Remove="Data\Migrations\20200603064005_PopulateFlowerData.cs" />
     <Compile Remove="Data\Migrations\20200603064005_PopulateFlowerData.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200603081409_AddDescriptionToFlowerModel.cs" />
+    <Compile Remove="Data\Migrations\20200603081409_AddDescriptionToFlowerModel.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

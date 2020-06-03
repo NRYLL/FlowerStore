@@ -15,6 +15,7 @@ namespace FlowerStore.Data
             : base(options)
         {
         }
+
         public DbSet<FlowerStore.Models.Flower> Flower { get; set; }
     }
 }
