@@ -17,5 +17,6 @@ namespace FlowerStore.Models
         public float price { get; set; }
         public int Quantity { get; set; }
         public FlowerTypes Type { get; set; }
+        public string Description { get; set; }
     }
 }
