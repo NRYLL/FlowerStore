@@ -5,6 +5,7 @@ using System.Text;
 using FlowerStore.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using FlowerStore.Models;
 
 namespace FlowerStore.Data
 {
@@ -14,6 +15,6 @@ namespace FlowerStore.Data
             : base(options)
         {
         }
-        public DbSet<AdminListItem> AdminListItem { get; set; }
+        public DbSet<FlowerStore.Models.Flower> Flower { get; set; }
     }
 }
