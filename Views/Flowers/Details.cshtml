@@ -52,14 +52,14 @@
         <div class="col-md-10">
             <div class="card-body">
                 <h5 class="card-title">Name: @Model.Name</h5>
-                <p class="card-text">Price: @Model.price</p>
-                <p class="card-text">Description: @Model.Description</p>
-
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <label>
-                    Quantity:
-                </label>
-                <input name="quantity" type="number" min="0" />
+                <p class="card-text"><strong>Price: <span class="input-group-text">$</span></strong>@Model.price</p>
+                <p class="card-text"><strong>Description: </strong>@Model.Description</p>
+                <div>
+                    <label>
+                        Quantity:
+                    </label>
+                    <input name="quantity" type="number" min="0" />
+                </div>
                 <button type="button" class="btn btn-primary">
                     Add to Cart
                 </button>
