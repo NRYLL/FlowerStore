@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using FlowerStore.Models;
 
 namespace FlowerStore.Data
 {
@@ -12,5 +13,6 @@ namespace FlowerStore.Data
             : base(options)
         {
         }
+        public DbSet<FlowerStore.Models.Flower> Flower { get; set; }
     }
 }
