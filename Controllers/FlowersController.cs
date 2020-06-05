@@ -87,7 +87,8 @@ namespace FlowerStore.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Cart(int id, [Bind("Id,Name,Image,price,Quantity,NumInCart")] Flower flower)
+
+        public async Task<IActionResult> Cart(int id, [Bind("Id,Name,Image,price,Quantity,Description,NumInCart")] Flower flower)
         {
             if (id != flower.Id)
             {
@@ -112,7 +113,7 @@ namespace FlowerStore.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
             }
             return View(flower);
         }

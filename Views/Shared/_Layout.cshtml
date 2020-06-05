@@ -52,19 +52,9 @@
                 <div class="nav-menus">
 
                     <ul class="nav nav-pills">
-                        <li class="active"><a style="border-radius:initial;" href="#">Home</a></li>
-                        <li><a style="border-radius:initial;" href="#">Flower</a></li>
-                        <li><a style="border-radius:initial;" href="#">Shop</a></li>
-                       
-                        <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#" >Cart<b class="cart"></b> </a>
-                            <ul class="dropdown-menu" >
-                                
-                                <li class="dropdown-divider"></li>
-                                <li><a href="#">Flower</a></li>
-                            </ul>
-                        </li>
-                        
+                        <li class="active"><a style="border-radius:initial;" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a style="border-radius:initial;" asp-controller="Flowers" asp-action="Index">Flower Shop</a></li>
+                        <partial name="_LoginPartial" />
                     </ul>
                 </div>
             </div>
