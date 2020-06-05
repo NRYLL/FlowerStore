@@ -1,0 +1,33 @@
+﻿@model FlowerStore.Models.Flower
+
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Shopping Cart</h1>
+
+
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="@Model.Image" class="card-img" alt="FlowerType">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title"> @Model.Name</h5>
+                <h5 class="card-title"> @Model.price</h5>
+                <h6 class="card-title">@Model.Quantity</h6>
+
+                <button type="butt on" class="btn btn-primary">
+                    Save|
+                </button>
+            </div>
+        </div>
+        <div>
+            <a asp-action="Delete" asp-route-id="@Model.Id">Delete</a> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+
+    </div>
+</div>
