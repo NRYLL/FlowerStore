@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FlowerStore.Data;
 using FlowerStore.Models;
+using Microsoft.AspNetCore.Session;
 
 namespace FlowerStore.Controllers
 {
@@ -65,15 +66,11 @@ namespace FlowerStore.Controllers
             return View(flower);
         }
 
-        // GET: Flowers/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: Flowers/Cart/1
+        public async Task<IActionResult> Cart()
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
 
-            var flower = await _context.Flower.FindAsync(id);
+            var flower = await _context.Flower.ToListAsync();
             if (flower == null)
             {
                 return NotFound();
@@ -81,12 +78,13 @@ namespace FlowerStore.Controllers
             return View(flower);
         }
 
-        // POST: Flowers/Edit/5
+        // POST: Flowers/Cart/1
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Image,price,Quantity,Description")] Flower flower)
+
+        public async Task<IActionResult> Cart(int id, [Bind("Id,Name,Image,price,Quantity,Description,NumInCart")] Flower flower)
         {
             if (id != flower.Id)
             {
@@ -111,7 +109,7 @@ namespace FlowerStore.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Cart));
             }
             return View(flower);
         }
@@ -149,5 +147,8 @@ namespace FlowerStore.Controllers
         {
             return _context.Flower.Any(e => e.Id == id);
         }
+
+       
+        
     }
 }
