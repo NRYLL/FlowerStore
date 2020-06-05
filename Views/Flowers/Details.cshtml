@@ -87,15 +87,19 @@
                     <h5 class="card-title">Name: @Model.Name</h5>
                     <p class="card-text"><strong>Price: <span>$</span></strong>@Model.price</p>
                     <p class="card-text"><strong>Description: </strong>@Model.Description</p>
-                    <form>
+                    <form asp-action="Cart">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <input asp-for="Name" type="hidden" value="@Model.Name" />
+                        <input asp-for="Image" type="hidden" value="@Model.Image" />
+                        <input asp-for="price" type="hidden" value="@Model.price" />
+                        <input asp-for="Quantity" type="hidden" value="@Model.Quantity" />
+                        <input asp-for="Description" type="hidden" value="@Model.Description" />
                         <div>
-                            <label>
-                                Quantity:
-                            </label>
-                            <input name="quantity" type="number" min="0" />
-                            <input name="Id" value="@Model.Id" type="hidden"/>
+                            <label asp-for="NumInCart" class="control-label">Quantity: </label>
+                            <input asp-for="NumInCart" class="form-control" />
                         </div>
-                        <button type="button" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary">
                             Add to Cart
                         </button>
                     </form>
