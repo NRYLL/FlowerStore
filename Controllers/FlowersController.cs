@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FlowerStore.Data;
 using FlowerStore.Models;
+using Microsoft.AspNetCore.Session;
 
 namespace FlowerStore.Controllers
 {
@@ -86,6 +87,7 @@ namespace FlowerStore.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> Cart(int id, [Bind("Id,Name,Image,price,Quantity,Description,NumInCart")] Flower flower)
         {
             if (id != flower.Id)
@@ -149,5 +151,8 @@ namespace FlowerStore.Controllers
         {
             return _context.Flower.Any(e => e.Id == id);
         }
+
+       
+        
     }
 }
