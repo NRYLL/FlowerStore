@@ -67,14 +67,10 @@ namespace FlowerStore.Controllers
         }
 
         // GET: Flowers/Cart/1
-        public async Task<IActionResult> Cart(int? id)
+        public async Task<IActionResult> Cart()
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
 
-            var flower = await _context.Flower.FindAsync(id);
+            var flower = await _context.Flower.ToListAsync();
             if (flower == null)
             {
                 return NotFound();
@@ -113,7 +109,7 @@ namespace FlowerStore.Controllers
                         throw;
                     }
                 }
-                //return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Cart));
             }
             return View(flower);
         }
