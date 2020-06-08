@@ -5,44 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*<h1>Details</h1>
-
-<div>
-    <h4>Flower</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.price)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.price)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Quantity)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Quantity)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-    </dl>
-</div>*@
 <link href="~/css/Card.css" rel="stylesheet">
 
 <main role="main">
@@ -77,7 +39,7 @@
         </a>
     </div>
 
-    <div class="card mb-3" style="min-width: 540px;">  @*<div class="card mb-3" style="max-width: 540px;">*@
+    <div class="card mb-3" style="min-width: 540px;">
         <div class="row py-5 no-gutters">
             <div class="col-md-6">
                 <img src="@Model.Image" class="card-img" alt="FlowerType">
@@ -97,7 +59,7 @@
                         <input asp-for="Description" type="hidden" value="@Model.Description" />
                         <div>
                             <label asp-for="NumInCart" class="control-label">Quantity: </label>
-                            <input asp-for="NumInCart" class="form-control" />
+                            <input asp-for="NumInCart" class="form-control" min="0"/>
                         </div>
                         <button type="submit" class="btn btn-primary">
                             Add to Cart
