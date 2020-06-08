@@ -1,5 +1,6 @@
 ﻿/*[1. IMPORT SOURCE]*/
 @import url(font-awesome.css);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300);
 
 
 body {
@@ -22,6 +23,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+  
 }
 
 
@@ -38,12 +40,14 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: -1px;
+        
     }
 
         .logo h1 span {
             font-weight: 300;
             font-family: 'PT Serif', serif;
             font-family: 'Dancing Script', cursive;
+
         }
 
         .logo h1 a {
@@ -51,7 +55,6 @@ h1, h2, h3, h4, h5, h6 {
             text-decoration: none;
             -webkit-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
             -moz-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
-            -ms-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
             -o-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
             transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
         }
@@ -106,35 +109,31 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .nav-menus {
-    box-sizing: border-box;
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    display: block;
-    font-family: 'PT Serif', serif;
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Metal Mania', cursive;
 }
 
     .nav-menus .nav-pills > li > a {
-        background: transparent;
-        color: #333;
-        margin: 15px;
-        color: #000;
+        float: left;
+        display: block;
+    
+        text-align: center;
+        padding: 12px 13px;
         text-decoration: none;
-        text-transform: uppercase;
-        border-radius: 50px;
-        border-color: #00ffff
     }
 
         .nav-menus .nav-pills > li > a:hover {
-            background: #eaeaea;
-            color: #333;
-            flex-direction: row;
+            background-color: #ddd;
         }
 
     .nav-menus .nav-pills > .active > a,
     .nav-menus .nav-pills > .active > a:hover,
     .nav-menus .nav-pills > .active > a:focus {
-        background: #0026ff;
-        color: #00ffff;
+      
     }
 
 
@@ -170,7 +169,7 @@ section {
 }
 
 .slide-title {
-    font-size: 4rem;
+    font-size: 2rem;
     line-height: 1;
     max-width: 50%;
     white-space: normal;
@@ -183,15 +182,13 @@ section {
 }
 
 .slide-paragraph {
-    font-size: 2rem;
-    line-height: 1;
-    max-width: 20%;
-    white-space: normal;
-    word-break: break-word;
-    color: #FFF;
-    z-index: 100;
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
 }
 
 @media (min-width: 45em) {
@@ -307,20 +304,63 @@ section {
     transform-origin: 0 0;
 }
 
-.olContent {
-    width: 100%;
+
+.Product h1 {
+    font-style: italic;
+    text-shadow: 1px 1px 10px black;
+    font-variant: small-caps;
+    font-family: 'Lobster', cursive;
+    font-family: 'Montaga', serif;
+    font-variant: small-caps;
+    text-shadow: 1px 1px 10px black;
 }
 
-    .olContent h2 {
-        color: #fff;
-        font-size: 19px;
-        padding: 9px 0 0;
-    }
 
-.olSearch {
-    width: 100%;
+.copyright {
+    font-size: 14px;
+    line-height: 16px;
+    font-style: italic;
+    font-weight: 400;
 }
 
-    .olSearch .inputComn {
-        margin-bottom: 0;
+    .copyright .copyright-left {
+        text-align: left;
     }
+
+
+    .copyright .copyright-right {
+        text-align: left;
+    }
+
+    .copyright .list-social {
+        float: left;
+        margin-top: -10px;
+        padding: 30px,30px;
+    }
+
+        .copyright .list-social > li {
+            display: inline;
+            float: left;
+            margin: 2px 5px;
+        }
+
+            .copyright .list-social > li > a {
+                width: 40px;
+                height: 40px;
+                background: #ffffff;
+                font-size: 30px;
+                color: #0000ff
+            }
+
+                .copyright .list-social > li > a:hover {
+                    background: #333333;
+                    border: 1px solid #333333;
+                    font-size: 20px;
+                    color: #ffffff;
+                }
+
+                .copyright .list-social > li > a .fa {
+                    position: absolute;
+                    left: 20%;
+                    top: 20%;
+                }

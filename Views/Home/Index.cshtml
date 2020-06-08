@@ -1,15 +1,16 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
+
+<!------ Include the above in your HEAD tag ---------->
+<link href="~/MyMainLayout.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montaga&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
 <script>
     !function (e) { "undefined" == typeof module ? this.charming = e : module.exports = e }(function (e, n) { "use strict"; n = n || {}; var t = n.tagName || "span", o = null != n.classPrefix ? n.classPrefix : "char", r = 1, a = function (e) { for (var n = e.parentNode, a = e.nodeValue, c = a.length, l = -1; ++l < c;) { var d = document.createElement(t); o && (d.className = o + r, r++), d.appendChild(document.createTextNode(a[l])), n.insertBefore(d, e) } n.removeChild(e) }; return function c(e) { for (var n = [].slice.call(e.childNodes), t = n.length, o = -1; ++o < t;)c(n[o]); e.nodeType === Node.TEXT_NODE && a(e) }(e), e });
 </script>
@@ -23,14 +24,20 @@
         <div class="swiper-wrapper">
 
             <div class="swiper-slide slide">
-                <div class="slide-image" style="        background-image: url('lib/images/22.png.jpg')"></div>
+                <div class="slide-image" style=" background-image: url('../lib/Images/abt3.png.jpg')"></div>
+
                 <span class="slide-title">About Us</span>
-                <span class="slide-paragraph">We are an independent and family owned flower shop in Edmonton. We love to bring amazing floral creations to life. We have been proudly serving Edmonton & area since 2006</span>
+                <span class="slide-paragraph">We are an independent and family owned flower shop in Edmonton. We love to bring amazing floral creations to life.<br /> We have been proudly serving Edmonton & area since 2006</span>
 
             </div>
 
             <div class="swiper-slide slide">
-                <div class="slide-image" style="        background-image: url('lib/images/27.png.jpg')"></div>
+                <div class="slide-image" style="  background-image: url('lib/images/wedding.jpg');
+"></div>
+
+
+
+
                 <span class="slide-title">Wedding & Events</span>
                 <span class="slide-paragraph">At Hypnotic Bloom, we strive to make your special moments memorable with the finest flowers available.</span>
 
@@ -38,9 +45,19 @@
             </div>
 
             <div class="swiper-slide slide">
-                <div class="slide-image" style="        background-image: url('lib/images/24.png.jpg')
+                <div class="slide-image" style="      background-image: url('lib/images/contact.jpg');
 "></div>
+
                 <span class="slide-title">Contact Us</span>
+                <span class="slide-paragraph">
+                    <b>
+                        Better yet, see us in person!
+                    </b>
+
+                    We love our customers, so feel free to visit during normal business hours.<br />10931 23 Avenue NW, Edmonton, Alberta T6J 6P4, Canada
+                    (567) 000-1111
+                </span>
+
             </div>
 
             <!--         <div class="swiper-slide slide">
@@ -72,6 +89,10 @@
         </div>
 
     </div>
+
+
+
+
 
 </section>
 <script>
@@ -140,6 +161,7 @@
 
                     },
                 },
+
 
                 // Navigation arrows
                 navigation: {
@@ -249,13 +271,82 @@
 
 </script>
 
-@*<div class="olContent f1"><h2 style="color:black">Search Product/Category</h2></div>
-<div class="olSearch fr">
-    <input type="text" placeholder="Enter Keyword" name="searchKey" class="inputComn houseText form-control" />
-    <div class="searchIcon">
-        <button type="button" class="searchBtn">
-            <img src="~/Images/searchIcon.png" />
-        </button>
+
+
+
+<!--Feacture Product-->
+
+
+
+<div class="Product">
+
+
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" > Featured Product</h1>
+    <hr class="mt-2 mb-5">
+
+
+
+
+</div>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <!-- Team Member 1 -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <img src="~/lib/Images/fect1.png.jpg" alt="width=" 250" height="350" />
+
+
+
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0"> Summer Flowers</h5>
+                    <div class="card-text text-black-50"> Brighten their summer days with colourful flowers from this hot Canada Flowers collection!</div>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <img src="~/lib/Images/fect5.png.jpg" alt="width=" 250" height="350" />
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0"> Anniversary Flowers</h5>
+                    <div class="card-text text-black-50">Original and Beautiful Anniversary Flowers florist delivered same day across Canada.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <img src="~/lib/Images/fect3.png.jpg" alt="width=" 250" height="350" />
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Love & Romance</h5>
+                    <div class="card-text text-black-50"> Demonstrate your love and affection by sending flowers from our Love and Romance catalogue. </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <img src="~/lib/Images/fect4.png.jpg" alt="width=" 250" height="350" />
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0"> Indoor Green Plants</h5>
+                    <div class="card-text text-black-50"> Handsome long-lasting planter garden of assorted green plants rooted in <br>soil. </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>*@
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+@*<div class="olContent f1"><h2 style="color:black">Search Product/Category</h2></div>
+    <div class="olSearch fr">
+        <input type="text" placeholder="Enter Keyword" name="searchKey" class="inputComn houseText form-control" />
+        <div class="searchIcon">
+            <button type="button" class="searchBtn">
+                <img src="~/Images/searchIcon.png" />
+            </button>
+        </div>
+    </div>*@
 
