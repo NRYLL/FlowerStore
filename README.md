@@ -5,7 +5,7 @@ The list of the contributors are:
 2)	Olaleye Agboola
 3)	Rathi Ramakrishnan
 4)	Linshia Mulayinkal Baby
-5)	Behin Aein Niloufar
+5)	Niloufar Behin Aein
 
 The initial purpose of creating this FlowerStore App to have a variety of flowers in the shop which will help solve the problem of customers’ fears of going to the shop to order flowers. This provides comfort, reduces time, and protects clients from potential exposure to COVID-19. 
 
