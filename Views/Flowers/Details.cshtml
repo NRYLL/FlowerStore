@@ -5,8 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<link href="~/css/Card.css" rel="stylesheet">
-
 <main role="main">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -17,16 +15,16 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="~/imgs/hello-spring.jpg" alt="" width="100%" height="400px" />
+                <img class="carousel-img" src="~/imgs/hello-spring.jpg" alt="" />
             </div>
             <div class="carousel-item">
-                <img src="~/imgs/beach-wedding.jpg" alt="" width="100%" height="400px" />
+                <img class="carousel-img" src="~/imgs/beach-wedding.jpg" alt="" />
             </div>
             <div class="carousel-item">
-                <img src="~/imgs/heart-shape.jpg" alt="" width="100%" height="400px" />
+                <img class="carousel-img" src="~/imgs/heart-shape.jpg" alt=""/>
             </div>
             <div class="carousel-item">
-                <img src="~/imgs/water-lily.jpg" alt="" width="100%" height="400px" />
+                <img class="carousel-img" src="~/imgs/water-lily.jpg" alt="" />
             </div>
         </div>
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -61,6 +59,7 @@
                             <label asp-for="NumInCart" class="control-label">Quantity: </label>
                             <input asp-for="NumInCart" class="form-control" min="0"/>
                         </div>
+                        <br />
                         <button type="submit" class="btn btn-primary">
                             Add to Cart
                         </button>
@@ -70,7 +69,6 @@
         </div>
     </div>
     <div>
-        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
         <a asp-action="Index">Back to List</a>
     </div>
 </main>
