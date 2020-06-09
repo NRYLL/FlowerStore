@@ -18,5 +18,6 @@ namespace FlowerStore.Models
         public int Quantity { get; set; }
         public FlowerTypes Type { get; set; }
         public string Description { get; set; }
+        public int NumInCart { get; set; }
     }
 }

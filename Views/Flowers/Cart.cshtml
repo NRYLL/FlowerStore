@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FlowerStore.Models.Flower>
+
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Shopping Cart</h1>
+<hr>
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+
+
+        @foreach (var Item in Model)
+        {
+            @if ((Item.NumInCart) > 0)
+            {
+                int perItemTotal = Convert.ToInt32(Item.NumInCart * Item.price);
+                <div class="col-md-4">
+                    <img src="@Item.Image" class="card-img" alt="FlowerType">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"> Name:@Item.Name</h5>
+                        <h5 class="card-title"> Price:@Item.price</h5>
+                        <h6 class="card-title">Quantity:@Item.NumInCart</h6>
+                        <h6 class="card-title">TotalPrice:@perItemTotal</h6>
+
+
+                        <button type="button" class="btn btn-primary" onclick="return confirm ('Your Product is ready to pay ')">
+                            CheckOut
+                        </button>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

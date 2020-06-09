@@ -12,8 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    
-    <link href="~/MyMainLayout.css" rel="stylesheet" />"
+
+    <link href="~/MyMainLayout.css" rel="stylesheet" />
+    <link href="~/css/Card.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
 
                             <div class="visible-xs">
 
-                                <p>345778899999</p>
+                                <p>3457788999</p>
                             </div>
 
                         </li>
@@ -51,9 +52,10 @@
                 <div class="nav-menus">
 
                     <ul class="nav nav-pills">
-                        <li class="active"><a style="border-radius:initial;" href="#">Home</a></li>
-                        <li><a style="border-radius:initial;" href="#">Flower</a></li>
-                        <li><a style="border-radius:initial;" href="#">Shop</a></li>
+                        <li class="active"><a style="border-radius:initial;" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a style="border-radius:initial;" asp-controller="Flowers" asp-action="Index">Flower Shop</a></li>
+                        <partial name="_LoginPartial" />
+                        <li ><a style="border-radius:initial;" asp-controller="Flowers" asp-action="Cart">Cart</a></li>
                     </ul>
                 </div>
             </div>
@@ -74,9 +76,9 @@
                     <div class="col-md-6 col-sm-6 copyright-right">
 
                         <ul class="list-unstyled list-social">
-                            <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="http://www.Facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                            <li><a href="http://www.Twitter.com"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="http://www.google-plus.com"><i class="fab fa-google-plus-square"></i></a></li>
 
                         </ul>
                     </div>
