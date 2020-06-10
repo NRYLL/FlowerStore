@@ -23,6 +23,12 @@ Use new scaffolding item to create MVC Controller and View. For generating Migra
 
 1)	Update-Database
 
+For the App to run effetively once cloned, there are 3 command lines that needs to be run for the App to be ready for use. These are secret authentication that we would not want to make public, as such, please contact any of the team members for details if interested in running the App!
+
+Once you have the App running, to login as Admin below are the credentials for same
+email: admin@nryll.com
+Password: !QAZ2wsx
+
 The list of citation: 
 1)	https://getbootstrap.com/
 
