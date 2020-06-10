@@ -20,7 +20,10 @@ namespace FlowerStore.Controllers
 
         public IActionResult Index()
         {
+            if (User.IsInRole("CanManageFlower"))
+                return RedirectToAction("Index", "AdminListItems");
             return View();
+            
         }
 
         public IActionResult Privacy()
