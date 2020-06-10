@@ -20,8 +20,8 @@ For this App to be functional, the following programs and packages will be neede
 8)	Microsoft.EntityFrameworkCore.Tools v3.1.4
 
 Use new scaffolding item to create MVC Controller and View. For generating Migration folder, the following command lines should be applied to update Database:
-1)	Add-Migration InitialCreate
-2)	Update-Database
+
+1)	Update-Database
 
 The list of citation: 
 1)	https://getbootstrap.com/
