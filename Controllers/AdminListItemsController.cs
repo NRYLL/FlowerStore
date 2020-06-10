@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FlowerStore.Data;
 using FlowerStore.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FlowerStore.Controllers
 {
+    [Authorize(Roles = "CanManageFlower")]
     public class AdminListItemsController : Controller
     {
         private readonly ApplicationDbContext _context;
