@@ -15,7 +15,7 @@
         {
             @if ((Item.NumInCart) > 0)
             {
-                int perItemTotal = Convert.ToInt32(Item.NumInCart * Item.price);
+                var perItemTotal = Item.NumInCart * Item.price;
                 <div class="col-md-4">
                     <img src="@Item.Image" class="card-img" alt="FlowerType">
                 </div>
@@ -24,8 +24,7 @@
                         <h5 class="card-title"> Name:@Item.Name</h5>
                         <h5 class="card-title"> Price:@Item.price</h5>
                         <h6 class="card-title">Quantity:@Item.NumInCart</h6>
-                        <h6 class="card-title">TotalPrice:@perItemTotal</h6>
-
+                        <h6 class="card-title">TotalPrice:@perItemTotal.ToString("F")</h6>
 
                         <button type="button" class="btn btn-primary" onclick="return confirm ('Your Product is ready to pay ')">
                             CheckOut
