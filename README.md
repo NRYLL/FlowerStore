@@ -1,6 +1,7 @@
-Project Name: NRYLL / FlowerStore 
+Project Name: NRYLL / FlowerStore
 
 The list of the contributors are: 
+
 1)	Yu (Vincent) Cui
 2)	Olaleye Agboola
 3)	Rathi Ramakrishnan
@@ -9,7 +10,8 @@ The list of the contributors are:
 
 The initial purpose of creating this FlowerStore App to have a variety of flowers in the shop which will help solve the problem of customers’ fears of going to the shop to order flowers. This provides comfort, reduces time, and protects clients from potential exposure to COVID-19. 
 
-For this App to be functional, the following programs and packages will be needed; 
+For this App to be functional, the following programs and packages will be needed:
+
 1)	Visual Studio Community 2019
 2)	.NET CORE 
 3)	Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore v3.1.4
@@ -21,17 +23,18 @@ For this App to be functional, the following programs and packages will be neede
 
 Use new scaffolding item to create MVC Controller and View. For generating Migration folder, the following command lines should be applied to update Database:
 
-1)	Update-Database
+1)	Add-Migration InitialCreate
+2)	Update-Database
 
-For the App to run effetively once cloned, there are 3 command lines that needs to be run for the App to be ready for use. These are secret authentication that we would not want to make public, as such, please contact any of the team members for details if interested in running the App!
+For the App to run effectively once cloned, there are three command lines that needs to be run for the App to be ready for use. These are secret authentication that we would not want to make public, as such, please contact any of the team members for details if interested in running the App!
 
-Once you have the App running, to login as Admin below are the credentials for same
-email: admin@nryll.com
-Password: !QAZ2wsx
+Once you have the App running, to login as Admin, below are the credentials: 
+Email: admin@nryll.com Password: !QAZ2wsx
+
+The administrator is able to Edit/ Delete/ Create flower when logged in, while when logged out the administrator is not able to perform same tasks.
 
 The list of citation: 
 1)	https://getbootstrap.com/
 
-The administrator is able to Edit/ Delete/ Create flower when logged in, while when logged out the administrator is not able to perform same tasks.
-
 The link of Trello board is: https://trello.com/b/pqdUk6zM/nryll
+
