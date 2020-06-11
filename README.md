@@ -23,8 +23,7 @@ For this App to be functional, the following programs and packages will be neede
 
 Use new scaffolding item to create MVC Controller and View. For generating Migration folder, the following command lines should be applied to update Database:
 
-1)	Add-Migration InitialCreate
-2)	Update-Database
+Update-Database
 
 For the App to run effectively once cloned, there are three command lines that needs to be run for the App to be ready for use. These are secret authentication that we would not want to make public, as such, please contact any of the team members for details if interested in running the App!
 
